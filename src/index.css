@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-surface-hover: var(--t-surface-hover);
+  --color-border: var(--t-border);
+  --color-text: var(--t-text);
+  --color-text-secondary: var(--t-text-secondary);
+  --color-accent: var(--t-accent);
+  --color-accent-light: var(--t-accent-light);
+  --color-poker-red: #e74c3c;
+  --color-poker-green: #27ae60;
+  --color-poker-blue: #3498db;
+  --color-poker-gold: #f39c12;
+  --color-poker-purple: #9b59b6;
+}
+
+/* Dark theme (default) */
+:root {
+  --t-bg: #0a0e17;
+  --t-surface: #131a2b;
+  --t-surface-hover: #1c2640;
+  --t-border: #243050;
+  --t-text: #e0e8f0;
+  --t-text-secondary: #8899b0;
+  --t-accent: #22c55e;
+  --t-accent-light: #4ade80;
+  --t-header-from: #0a0e17;
+  --t-header-via: #0f1a2e;
+  --t-header-to: #0a1520;
+  --t-active-tab-text: #0a0e17;
+  --t-code-bg: rgba(34, 197, 94, 0.1);
+  --t-tip-bg: rgba(243, 156, 18, 0.08);
+  --t-tip-border: rgba(243, 156, 18, 0.2);
+  --t-card-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --t-bg: #f0f4f8;
+  --t-surface: #ffffff;
+  --t-surface-hover: #e8eef5;
+  --t-border: #c8d4e0;
+  --t-text: #1a2030;
+  --t-text-secondary: #5a6878;
+  --t-accent: #16a34a;
+  --t-accent-light: #15803d;
+  --t-header-from: #e0eaf0;
+  --t-header-via: #d0dde8;
+  --t-header-to: #dae5f0;
+  --t-active-tab-text: #ffffff;
+  --t-code-bg: rgba(22, 163, 74, 0.08);
+  --t-tip-bg: rgba(200, 130, 10, 0.08);
+  --t-tip-border: rgba(200, 130, 10, 0.25);
+  --t-card-shadow: rgba(80, 100, 130, 0.1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  background-color: var(--t-bg);
+  color: var(--t-text);
+  margin: 0;
+  min-width: 320px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
