@@ -8,6 +8,7 @@ import {
   classicExample,
   philosophy,
 } from "./data/gtoData";
+import PreflopTrainer from "./components/PreflopTrainer";
 
 function useTheme() {
   const [theme, setTheme] = useState(() => {
@@ -191,6 +192,18 @@ function App() {
         {/* Preflop Ranges */}
         <section id="preflop" className="scroll-mt-20">
           <SectionHeader icon="🃏" title="Preflop 開局範圍" color="#e74c3c" />
+
+          {/* Interactive Hand Matrix */}
+          <div className="mb-8">
+            <h3 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-3">
+              互動式開局表 — 點擊位置查看 Range，點擊手牌查看詳情
+            </h3>
+            <PreflopTrainer />
+          </div>
+
+          <h3 className="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-3">
+            各位置開局概覽
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {preflopRanges.map((r, i) => (
               <div
